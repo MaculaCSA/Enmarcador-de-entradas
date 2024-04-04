@@ -23,7 +23,7 @@ try:
             png_file = os.path.join(png_folder, filename[:-4] + ".png")
 
             # Comando para convertir el archivo SVG en PNG utilizando Inkscape
-            command = f"inkscape {svg_file} --export-type=png --export-filename={png_file} --export-width=3000 --export-height=2125"
+            command = f"inkscape {svg_file} --export-type=png --export-filename={png_file} --export-width=1476 --export-height=478"
 
             # Ejecutar el comando en la línea de comandos
             subprocess.run(command, shell=True)
@@ -32,6 +32,6 @@ try:
 
             # Decir progreso en porcentaje de cuantos quedan
             print(f"Progreso: {round((os.listdir(svg_folder).index(filename)) / len(os.listdir(svg_folder)) * 100, 2)}%")
-            
+
 except FileNotFoundError:
     print(f"No hay archivos SVG en la carpeta '{svg_folder}'. Primero ejecuta svg.py")
