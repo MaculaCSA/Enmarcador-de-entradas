@@ -29,5 +29,9 @@ try:
             subprocess.run(command, shell=True)
 
             print(f"Archivo {filename} convertido a PNG")
+
+            # Decir progreso en porcentaje de cuantos quedan
+            print(f"Progreso: {round((os.listdir(svg_folder).index(filename)) / len(os.listdir(svg_folder)) * 100, 2)}%")
+            
 except FileNotFoundError:
     print(f"No hay archivos SVG en la carpeta '{svg_folder}'. Primero ejecuta svg.py")
