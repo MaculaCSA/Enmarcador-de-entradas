@@ -23,7 +23,7 @@ try:
             png_file = os.path.join(png_folder, filename[:-4] + ".png")
 
             # Comando para convertir el archivo SVG en PNG utilizando Inkscape
-            command = f"inkscape {svg_file} --export-type=png --export-filename={png_file}"
+            command = f"inkscape {svg_file} --export-type=png --export-filename={png_file} --export-width=3000 --export-height=2125"
 
             # Ejecutar el comando en la línea de comandos
             subprocess.run(command, shell=True)
